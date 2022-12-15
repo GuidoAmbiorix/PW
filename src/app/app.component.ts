@@ -6,10 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'pw';
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
   password:string = '';
+
+
+  onChangeUseLetters(){
+  this.includeLetters = !this.includeLetters;
+  }
+
+  onChangeUseNumbers(){
+    this.includeNumbers = !this.includeNumbers;
+  }
+
+  onChangeUseSymbols(){
+    this.includeSymbols = !this.includeSymbols;
+  }
+
+  onChangeLength(event:any){
+
+  }
 
   onButtonClick(){
     this.password = 'MY PASSWORD';
   }
+
+
 }

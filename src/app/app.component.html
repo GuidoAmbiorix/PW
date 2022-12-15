@@ -6,20 +6,20 @@
 <div class="container">
   <mat-form-field>
     <mat-label>Password length</mat-label>
-    <input matInput>
+    <input matInput (input)="onChangeLength($event)">
   </mat-form-field>
 
   <div class="checkboxs">
     <section>
-      <mat-checkbox> Use Letters</mat-checkbox>
+      <mat-checkbox (change)="onChangeUseLetters()"> Use Letters</mat-checkbox>
     </section>
 
     <section>
-      <mat-checkbox> Use Numbers</mat-checkbox>
+      <mat-checkbox (change)="onChangeUseNumbers()"> Use Numbers</mat-checkbox>
     </section>
 
     <section>
-      <mat-checkbox> Use Symbols</mat-checkbox>
+      <mat-checkbox (change)="onChangeUseSymbols()"> Use Symbols</mat-checkbox>
     </section>
   </div>
 
