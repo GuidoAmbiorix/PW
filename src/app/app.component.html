@@ -1,0 +1,36 @@
+
+  <mat-toolbar color="primary">
+    <span>Password Generator</span>
+  </mat-toolbar>
+
+<div class="container">
+  <mat-form-field>
+    <mat-label>Password length</mat-label>
+    <input matInput>
+  </mat-form-field>
+
+  <div class="checkboxs">
+    <section>
+      <mat-checkbox> Use Letters</mat-checkbox>
+    </section>
+
+    <section>
+      <mat-checkbox> Use Numbers</mat-checkbox>
+    </section>
+
+    <section>
+      <mat-checkbox> Use Symbols</mat-checkbox>
+    </section>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="onButtonClick()">Generate!</button>
+
+  <section >
+    <mat-form-field>
+      <mat-label>Your password</mat-label>
+      <input matInput disabled [value]="password">
+    </mat-form-field>
+  </section>
+</div>
+
+
