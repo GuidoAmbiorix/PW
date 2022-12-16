@@ -6,7 +6,7 @@
 <div class="container">
   <mat-form-field>
     <mat-label>Password length</mat-label>
-    <input matInput (input)="onChangeLength($event)">
+    <input matInput #length type="number">
   </mat-form-field>
 
   <div class="checkboxs">
@@ -23,7 +23,7 @@
     </section>
   </div>
 
-  <button mat-raised-button color="primary" (click)="onButtonClick()">Generate!</button>
+  <button mat-raised-button color="primary" (click)="onButtonClick()" [disabled]="isLength">Generate!</button>
 
   <section >
     <mat-form-field>
